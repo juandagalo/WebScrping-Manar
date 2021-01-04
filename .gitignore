@@ -123,3 +123,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Drivers
+geckodriver.exe
+chromedriver.exe
+
+
+# VS Code Settings
+.vscode
