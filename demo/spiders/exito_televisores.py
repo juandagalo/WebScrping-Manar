@@ -10,6 +10,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 from selenium.common.exceptions import NoSuchElementException
 
+from datetime import datetime
+
 class ExitoTelevisoresSpider(scrapy.Spider):
 
     name = 'exito_televisores'
@@ -82,7 +84,8 @@ class ExitoTelevisoresSpider(scrapy.Spider):
             except NoSuchElementException:
                 item["spot_price"]              = ""
             
-
+            now = datetime.now()
+            item["date"] = now.strftime("%m/%d/%Y %H:%M:%S")
 
             yield item
 

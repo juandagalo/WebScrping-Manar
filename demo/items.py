@@ -40,6 +40,7 @@ class ExitoSeleniumItem(scrapy.Item):
     precio_sin_descuento    = scrapy.Field()
     precio_aliados          = scrapy.Field()
     spot_price              = scrapy.Field()
+    date                    = scrapy.Field()
 
 
 class ExitoVinos(scrapy.Item):

@@ -14,6 +14,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 from selenium.common.exceptions import NoSuchElementException
 
+from datetime import datetime
+
 
 class ExitoVinosSpider(scrapy.Spider):
 
@@ -106,6 +108,8 @@ class ExitoVinosSpider(scrapy.Spider):
             except NoSuchElementException:
                 item["porcentaje_descuento"]    = ""
 
+            now = datetime.now()
+            item["date"] = now.strftime("%m/%d/%Y %H:%M:%S")
 
             yield item
 
